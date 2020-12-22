@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script> 
+        
+    </head>
+    <body onload="onLoad()">
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              
+                <div class="modal-header"></div>
+                <div class="modal-body">
+                    <table id="billing">
+                        
+                    </table>
+                    <div class="grand-total">Grand Total : <span id="grand_total"></span></div>
+                    <button id="save" >CheckOut</button>
+                </div>
+                
+
+            </div>
+          
+          </div>
+        <div>
+            <div class="row">
+                <div class="col-3" >
+                    <div class="title">TABLE</div>
+                    <form class="search">
+                        <input id="tableSearch" type="text" placeholder="Search.." value="Table-" name="tablesSearch" onkeyup="searchTable(event)">                     
+                    </form>
+                    <div id="box">
+                        <div class="table" id="table-1" ondrop="drop(event, this)" ondragover="allowDrop(event)" onclick="openModel(this)">
+                            <div class="table-title">Table-1</div>
+                            <div class="table-content">Rs. <span id="price">0</span> | Total items: <span id="total">0</span></div>
+                        </div>
+                        <div class="table" id="table-2" ondrop="drop(event, this)" ondragover="allowDrop(event)" onclick="openModel(this)">
+                            <div class="table-title">Table-2</div>
+                            <div class="table-content">Rs. <span id="price">0</span> | Total items: <span id="total">0</span></div>
+                        </div>
+                        <div class="table" id="table-3" ondrop="drop(event, this)" ondragover="allowDrop(event)" onclick="openModel(this)">
+                            <div class="table-title">Table-3</div>
+                            <div class="table-content">Rs. <span id="price">0</span> | Total items: <span id="total">0</span></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="vertical"></div>
+                <div class="col-9" >
+                    <div class="title">MENU</div>
+                    <form class="search">
+                        <input type="text" placeholder="Search.." name="tmenuSearch" onkeyup="searchItem(event)">
+                        
+                    </form>
+                    <div id="menu-list">
+                        <div class="menu" id="menu-1" draggable="true" ondragstart="drag(event)">
+                            <div id="menu-title">French Fries</div>
+                            <div id="menu-content">105.50</div>
+
+                        </div>
+                        <div class="menu" id="menu-2" draggable="true" ondragstart="drag(event)">
+                            <div id="menu-title">French Fries with Cheese & Jalapenos</div>
+                            <div id="menu-content">135.00</div>
+                            
+                        </div>
+                        <div class="menu" id="menu-3" draggable="true" ondragstart="drag(event)">
+                            <div id="menu-title">Crusty Garlic Focaccia with Melted Cheese</div>
+                            <div id="menu-content">105.00</div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

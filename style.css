@@ -1,0 +1,185 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    /* overflow: hidden;  */
+}
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    height: 100%;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.vertical { 
+    border-left: 6px solid black; 
+    height: 100%; 
+    position:absolute; 
+    left: 25%; 
+}
+.title{
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+.search{
+    padding: inherit;
+}
+.search::after{
+    content: "";
+    clear: both;
+    display:table;
+}
+.search input[type=text]{
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: transparent;
+    border-radius: 25px;
+}
+.table, .menu{
+    box-shadow: 0 0 5px grey;
+    margin-top: 20px;  
+    width: 100%;  
+}
+.table{  
+    width: 100%;  
+    height: 15%;
+}
+.menu{
+    margin: 10px;
+    width: 90%;
+    height: 15%;
+}
+/* #menu-list{
+    overflow-y: auto;
+} */
+/* #menu-list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+#menu-list::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+#menu-list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+} */
+#menu-title, .table-title{
+    padding: 20px;
+    font-size: x-large;
+}
+#menu-content, .table-content{
+    padding:20px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    /* padding: 20px; */
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal-header {
+padding: 2px 16px;
+background-color:aliceblue;
+color: black;
+}
+
+.modal-body {padding: 2px 16px 70px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    /* background-color: #5cb85c; */
+    color: white;
+}
+
+#billing{
+    width: 100%;
+}
+
+#billing th{
+    /* width: 25%; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+#billing td{
+    /* width: 25%; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+button{
+    cursor: pointer;
+    background-color: aliceblue;
+    margin-top: 20px;
+    float: right;
+}
+button:hover{
+    background-color: black;
+    color: aliceblue;
+}
+i:hover{
+    cursor: pointer;
+}
+.grand-total{
+    /* display: none; */
+    text-align: center;
+    padding-top: 20px;
+}
